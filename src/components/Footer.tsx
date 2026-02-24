@@ -146,7 +146,7 @@ export default function Footer() {
             </h4>
             <div className="overflow-hidden rounded-xl border border-charcoal-700">
               <iframe
-                title="Wheelsshop Location — Jai Hind Gandhi Rd, VIP Hills, Madhapur"
+                title="WheelsShop Location — Jai Hind Gandhi Rd, VIP Hills, Madhapur"
                 src={CONTACT.mapEmbed}
                 width="100%"
                 height="220"

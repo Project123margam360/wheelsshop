@@ -1,6 +1,6 @@
 /**
  * Reusable Framer Motion variant presets for consistent animations
- * across the entire Wheelsshop website.
+ * across the entire WheelsShop website.
  */
 
 import type { Variants } from "framer-motion";

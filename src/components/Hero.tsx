@@ -47,7 +47,7 @@ export default function Hero() {
           className="mx-auto max-w-5xl text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Welcome to{" "}
-          <span className="text-safety-orange">Wheelsshop</span>{" "}
+          <span className="text-safety-orange">WheelsShop</span>{" "}
           <span className="text-charcoal-300">|</span> Madhapur
           <span className="mt-3 block text-2xl font-semibold tracking-normal text-charcoal-200 sm:text-3xl md:text-4xl">
             Premier Car Service &amp; Auto Repairs in Hyderabad

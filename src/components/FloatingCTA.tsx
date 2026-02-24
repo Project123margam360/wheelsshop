@@ -30,7 +30,7 @@ export default function FloatingCTA() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.8 }}
               transition={{ duration: 0.2, delay: 0.05 }}
-              href={`https://wa.me/917995866191?text=Hi!%20I'd%20like%20to%20book%20a%20car%20service%20at%20Wheelsshop%20Madhapur.`}
+              href={`https://wa.me/917995866191?text=Hi!%20I'd%20like%20to%20book%20a%20car%20service%20at%20WheelsShop%20Madhapur.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95"

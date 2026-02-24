@@ -33,7 +33,7 @@ export default function About() {
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=800&q=80"
-                  alt="Wheelsshop service center — mechanics at work"
+                  alt="WheelsShop service center — mechanics at work"
                   className="h-[450px] w-full object-cover"
                 />
                 {/* Orange overlay bar */}
@@ -85,7 +85,7 @@ export default function About() {
               <p className="mb-6 text-lg leading-relaxed text-charcoal-300">
                 Founded in 2016 by{" "}
                 <strong className="font-semibold text-white">Mohd Feroz</strong>,
-                Wheelsshop has grown from a small garage in Madhapur to
+                WheelsShop has grown from a small garage in Madhapur to
                 Hyderabad&apos;s most trusted multi-brand car service center. Our
                 commitment to quality, transparency, and customer satisfaction
                 drives everything we do.

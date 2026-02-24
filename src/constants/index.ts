@@ -1,9 +1,9 @@
 // ─── Brand ───────────────────────────────────────────────
-export const SITE_NAME = "Wheelsshop";
+export const SITE_NAME = "WheelsShop";
 export const SITE_TAGLINE = "Premium Car Service Center";
 export const SITE_LOCATION = "Madhapur, Hyderabad";
 export const SITE_DESCRIPTION =
-  "Wheelsshop | Madhapur — Your trusted destination for premium car servicing, detailing, and repairs in Hyderabad.";
+  "WheelsShop | Madhapur — Your trusted destination for premium car servicing, detailing, and repairs in Hyderabad.";
 
 // ─── Contact ─────────────────────────────────────────────
 export const CONTACT = {
