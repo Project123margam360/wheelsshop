@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ═══════════════════════════════════════════════════════════
+   Wheelsshop — Tailwind v4 Design Tokens
+   All custom colours, fonts, shadows & animations are
+   declared here so every utility class resolves correctly.
+   ═══════════════════════════════════════════════════════════ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Semantic shortcuts ──────────────────────────────── */
+  --color-background: #f8f8f8;
+  --color-foreground: #1a1a1a;
+  --color-accent: #ff6600;
+  --color-accent-hover: #e65c00;
+  --color-muted: #4d4d4d;
+  --color-border: #e5e5e5;
+
+  /* ── Charcoal Gray palette ──────────────────────────── */
+  --color-charcoal-50: #f5f5f5;
+  --color-charcoal-100: #e5e5e5;
+  --color-charcoal-200: #cccccc;
+  --color-charcoal-300: #b3b3b3;
+  --color-charcoal-400: #808080;
+  --color-charcoal-500: #4d4d4d;
+  --color-charcoal-600: #333333;
+  --color-charcoal-700: #2a2a2a;
+  --color-charcoal-800: #1a1a1a;
+  --color-charcoal-900: #111111;
+  --color-charcoal-950: #0a0a0a;
+  --color-charcoal: #1a1a1a;
+
+  /* ── Safety Orange palette ─────────────────────────── */
+  --color-safety-orange-50: #fff5eb;
+  --color-safety-orange-100: #ffe6cc;
+  --color-safety-orange-200: #ffcc99;
+  --color-safety-orange-300: #ffb366;
+  --color-safety-orange-400: #ff9933;
+  --color-safety-orange-500: #ff6600;
+  --color-safety-orange-600: #e65c00;
+  --color-safety-orange-700: #cc5200;
+  --color-safety-orange-800: #993d00;
+  --color-safety-orange-900: #662900;
+  --color-safety-orange-950: #331400;
+  --color-safety-orange: #ff6600;
+
+  /* ── Off-white variants ────────────────────────────── */
+  --color-offwhite: #f8f8f8;
+  --color-offwhite-warm: #faf9f7;
+  --color-offwhite-cool: #f5f7fa;
+
+  /* ── Fonts ─────────────────────────────────────────── */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  /* ── Custom shadows ────────────────────────────────── */
+  --shadow-glow: 0 0 20px rgba(255, 102, 0, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(255, 102, 0, 0.4);
+
+  /* ── Custom animations ─────────────────────────────── */
+  --animate-fade-in: fadeIn 0.6s ease-out forwards;
+  --animate-slide-up: slideUp 0.6s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 0.6s ease-out forwards;
+  --animate-slide-in-right: slideInRight 0.6s ease-out forwards;
+  --animate-marquee: marquee 40s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
+/* ── Section Dividers ──────────────────────────────────── */
+.section-divider-wave {
+  position: relative;
+}
+.section-divider-wave::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23f8f8f8' d='M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* ── Base Styles ───────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Smooth Scrolling ──────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* ── Selection Highlight ───────────────────────────────── */
+::selection {
+  background-color: #ff660033;
+  color: #1a1a1a;
+}
+
+/* ── Scrollbar (Webkit) ────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6600;
 }
