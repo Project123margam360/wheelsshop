@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Car } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { NAV_LINKS, SITE_NAME, CONTACT } from "@/constants";
 
 export default function Navbar() {
@@ -34,24 +35,17 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-300 ${
-          scrolled ? "py-3" : "py-4"
+        className={`mx-auto flex h-16 max-w-7xl items-center justify-between px-6 transition-all duration-300 ${
+          scrolled ? "" : ""
         }`}
       >
         {/* ── Logo ─────────────────────────────────────── */}
-        <Link href="/" className="group flex items-center gap-3">
-          {/* Icon placeholder */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-safety-orange transition-transform group-hover:scale-110">
-            <Car size={22} className="text-white" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-xl font-extrabold tracking-tight text-white">
-              {SITE_NAME}
-            </span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-charcoal-400">
-              Madhapur
-            </span>
-          </div>
+        <Link href="/" className="group relative shrink-0 transition-transform hover:scale-105">
+          <img
+            src="/logo.png"
+            alt="WheelsShop Logo"
+            className="h-24 w-auto invert -my-4"
+          />
         </Link>
 
         {/* ── Desktop Navigation Links ─────────────────── */}

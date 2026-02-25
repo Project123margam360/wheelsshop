@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -10,7 +11,6 @@ import {
   Twitter,
   Youtube,
   ExternalLink,
-  Car,
 } from "lucide-react";
 import { SITE_NAME, CONTACT, NAV_LINKS } from "@/constants";
 
@@ -37,10 +37,14 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* ── Col 1: About + Founder ─────────────────────── */}
           <div className="lg:col-span-4">
-            <Link href="/" className="group inline-flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-safety-orange transition-transform group-hover:scale-110">
-                <Car size={22} className="text-white" />
-              </div>
+            <Link href="/" className="group inline-flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="WheelsShop Logo"
+                width={48}
+                height={48}
+                className="transition-transform group-hover:scale-110"
+              />
               <div className="flex flex-col leading-none">
                 <span className="text-xl font-extrabold tracking-tight text-white">
                   {SITE_NAME}
