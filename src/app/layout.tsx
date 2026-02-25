@@ -19,6 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: `${SITE_NAME} | Premium Car Service in Madhapur, Hyderabad`,
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
