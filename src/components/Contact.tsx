@@ -26,11 +26,11 @@ export default function Contact() {
 
             <div className="space-y-6">
               {[
-                { icon: MapPin, label: "Address", value: CONTACT.address },
-                { icon: Phone, label: "Phone", value: CONTACT.phone },
-                { icon: Mail, label: "Email", value: CONTACT.email },
-                { icon: Clock, label: "Working Hours", value: CONTACT.hours },
-              ].map(({ icon: Icon, label, value }) => (
+                { icon: MapPin, label: "Address", value: CONTACT.address, href: CONTACT.mapUrl },
+                { icon: Phone, label: "Phone", value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s/g, '')}` },
+                { icon: Mail, label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
+                { icon: Clock, label: "Working Hours", value: CONTACT.hours, href: undefined },
+              ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-safety-orange/10 text-safety-orange">
                     <Icon size={22} />
@@ -39,7 +39,18 @@ export default function Contact() {
                     <div className="text-sm font-medium text-charcoal-400">
                       {label}
                     </div>
-                    <div className="text-base text-white">{value}</div>
+                    {href ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-base text-white underline decoration-charcoal-600 underline-offset-2 transition-colors hover:text-safety-orange hover:decoration-safety-orange"
+                      >
+                        {value}
+                      </a>
+                    ) : (
+                      <div className="text-base text-white">{value}</div>
+                    )}
                   </div>
                 </div>
               ))}

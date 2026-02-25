@@ -11,7 +11,7 @@ export const CONTACT = {
   email: "hello@wheelsshop.in",
   address:
     "Jai Hind Gandhi Rd, VIP Hills, Madhapur, Hyderabad, Telangana 500081",
-  mapUrl: "https://maps.google.com/?q=Jai+Hind+Gandhi+Rd+VIP+Hills+Madhapur+Hyderabad",
+  mapUrl: "https://maps.app.goo.gl/Ve9SciunAPThHMyV6?g_st=iw",
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3!2d78.3876!3d17.4484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzU0LjIiTiA3OMKwMjMnMTUuNCJF!5e0!3m2!1sen!2sin!4v1700000000000",
   hours: "Mon – Sat: 8 AM – 7 PM | Sun: 9 AM – 2 PM",
